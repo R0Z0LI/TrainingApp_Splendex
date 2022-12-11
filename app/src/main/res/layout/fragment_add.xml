@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="10dp"
+    android:paddingTop="10dp"
+    android:paddingRight="10dp"
+    android:paddingBottom="10dp"
+    android:background="@color/primaryLightColor"
+    tools:context=".auth.signin.CreateAccountActivity"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
+                android:paddingStart="15dp"
+                android:text="@string/name"
+                android:textColor="@color/primaryDarkColor" />
+
+            <EditText
+                android:id="@+id/etName"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
+                android:background="@drawable/input_shape"
+                android:ems="10"
+                android:inputType="number"
+                android:hint="@string/enter_the_name_of_the_training"
+                android:textColor="@color/primaryDarkColor"
+                android:paddingStart="15dp" />
+
+            <TextView
+                android:id="@+id/tvType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
+                android:paddingStart="15dp"
+                android:text="@string/type"
+                android:textColor="@color/primaryDarkColor" />
+
+            <EditText
+                android:id="@+id/etType"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
+                android:background="@drawable/input_shape"
+                android:ems="10"
+                android:inputType="number"
+                android:hint="@string/enter_the_type_of_the_training"
+                android:textColor="@color/primaryDarkColor"
+                android:paddingStart="15dp" />
+
+            <TextView
+                android:id="@+id/tvDuration"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
+                android:paddingStart="15dp"
+                android:text="@string/duration"
+                android:textColor="@color/primaryDarkColor" />
+
+            <EditText
+                android:id="@+id/etDuration"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
+                android:background="@drawable/input_shape"
+                android:ems="10"
+                android:inputType="number"
+                android:hint="@string/enter_the_duration_of_training"
+                android:textColor="@color/primaryDarkColor"
+                android:paddingStart="15dp" />
+
+            <TextView
+                android:id="@+id/tvCaloriesBurnt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="32dp"
+                android:paddingStart="15dp"
+                android:text="@string/calories_burnt"
+                android:textColor="@color/primaryDarkColor" />
+
+            <EditText
+                android:id="@+id/etCaloriesBurnt"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
+                android:background="@drawable/input_shape"
+                android:ems="10"
+                android:inputType="number"
+                android:hint="@string/enter_the_calories_burnt"
+                android:paddingStart="15dp" />
+
+            <TextView
+                android:id="@+id/tvDistance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="32dp"
+                android:textColor="@color/primaryDarkColor"
+                android:paddingStart="15dp"
+                android:text="@string/distance" />
+
+            <EditText
+                android:id="@+id/etDistance"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
+                android:background="@drawable/input_shape"
+                android:ems="10"
+                android:inputType="number"
+                android:hint="@string/enter_the_distance_traveled"
+                android:paddingStart="15dp" />
+
+            <TextView
+                android:id="@+id/tvMaxSpeed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="32dp"
+                android:textColor="@color/primaryDarkColor"
+                android:paddingLeft="15dp"
+                android:text="@string/max_speed" />
+
+            <EditText
+                android:id="@+id/etMaxSpeed"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
+                android:background="@drawable/input_shape"
+                android:ems="10"
+                android:inputType="number"
+                android:hint="@string/enter_the_maximum_speed"
+                android:paddingLeft="15dp" />
+
+            <TextView
+                android:id="@+id/tvAvgSpeed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="32dp"
+                android:textColor="@color/primaryDarkColor"
+                android:paddingStart="15dp"
+                android:text="@string/avg_speed" />
+
+            <EditText
+                android:id="@+id/etAvgSpeed"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
+                android:background="@drawable/input_shape"
+                android:ems="10"
+                android:hint="@string/enter_average_speed"
+                android:inputType="number"
+                android:paddingLeft="15dp" />
+
+            <TextView
+                android:id="@+id/tvMaxPulse"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="32dp"
+                android:textColor="@color/primaryDarkColor"
+                android:paddingLeft="15dp"
+                android:text="@string/max_pulse" />
+
+            <EditText
+                android:id="@+id/etMaxPulse"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
+                android:background="@drawable/input_shape"
+                android:ems="10"
+                android:hint="@string/max_pulse"
+                android:inputType="number"
+                android:paddingLeft="15dp" />
+
+            <TextView
+                android:id="@+id/tvAvgPulse"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="32dp"
+                android:textColor="@color/primaryDarkColor"
+                android:paddingLeft="15dp"
+                android:text="@string/avg_pulse" />
+
+
+            <EditText
+                android:id="@+id/etAvgPulse"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
+                android:background="@drawable/input_shape"
+                android:ems="10"
+                android:hint="@string/avg_pulse"
+                android:paddingLeft="15dp"
+                android:inputType="number" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnRegister"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginBottom="40dp"
+                android:background="@drawable/btn_background"
+                android:text="@string/add" />
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

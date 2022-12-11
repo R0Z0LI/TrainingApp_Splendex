@@ -1,0 +1,118 @@
+<resources>
+    <string name="app_name">TrainingApp</string>
+    <string name="log_in">Log in</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="forgot_your_password">Forgot your password?</string>
+    <string name="create_your_account">Create your account!</string>
+    <string name="registration">Registration</string>
+    <string name="enter_your_first_name">Enter your first name</string>
+    <string name="first_name">First Name</string>
+    <string name="enter_your_second_name">Enter your second name</string>
+    <string name="username">Username</string>
+    <string name="second_name">Second name</string>
+    <string name="enter_your_username_name">Enter your username name</string>
+    <string name="enter_your_email_address">Enter your Email address</string>
+    <string name="register">Register</string>
+    <string name="pw">*******</string>
+    <string name="confirm_password">Confirm password</string>
+    <string name="welcome_to_the_training_app">Welcome to the training app</string>
+    <string name="calendar">Calendar</string>
+    <string name="home">Home</string>
+    <string name="friends">Friends</string>
+    <string name="settings">Settings</string>
+    <string name="profile">Profile</string>
+    <string name="placeholder">placeholder</string>
+    <string name="notifications">Notifications</string>
+    <string name="security">Security</string>
+    <string name="appearance">Appearance</string>
+    <string name="about">About</string>
+    <string name="name">Name</string>
+    <string name="repetition">Repetition</string>
+    <string name="time">Time</string>
+    <string name="description">Description</string>
+    <string name="reset_password">Reset password</string>
+    <string name="fingerprint_1">Fingerprint 1</string>
+    <string name="fingerprint_2">Fingerprint 2</string>
+    <string name="fingerprint_3">Fingerprint 3</string>
+    <string name="theme">Theme</string>
+    <string name="keep_on_screen">Keep On Screen</string>
+    <string name="creators">Creators</string>
+    <string name="creationtime">CreationTime</string>
+    <string name="latestupdate">LatestUpdate</string>
+    <string name="plans">Plans</string>
+    <string name="training_plan1">Training plan1</string>
+    <string name="details">Details</string>
+    <string name="my_trainings">My trainings</string>
+    <string name="time_spent_training">Time spent training</string>
+    <string name="number_of_exercises">Number of exercises</string>
+    <string name="calories_burnt">Calories burnt</string>
+    <string name="add">Add</string>
+    <string name="duration">Duration</string>
+    <string name="calories">calories</string>
+    <string name="avg_speed">Avg speed</string>
+    <string name="max_speed">Max speed</string>
+    <string name="distance">Distance</string>
+    <string name="max_pulse">Max pulse</string>
+    <string name="avg_pulse">Avg pulse</string>
+    <string name="save">save</string>
+    <string name="exercise">Exercise</string>
+    <string name="type">Type</string>
+    <string name="enter_the_duration_of_training">Enter the duration of training</string>
+    <string name="enter_the_distance_traveled">Enter the distance traveled</string>
+    <string name="enter_the_maximum_speed">Enter the maximum speed</string>
+    <string name="enter_average_speed">Enter average speed</string>
+    <string name="reset_your_password">Reset your password</string>
+    <string name="send_email">Send Email</string>
+    <string name="profile_details">Profile Details</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="skip">Skip</string>
+    <string name="next">Next</string>
+    <string name="add_profile_picture">Add profile picture</string>
+    <string name="enter_your_age">Enter your age</string>
+    <string name="enter_your_phone_number">Enter your phone number</string>
+    <string name="gender">Gender</string>
+    <string name="date">Date</string>
+    <string name="don_t_show_this_again">Don\'t show this again</string>
+    <string name="title">Title</string>
+    <string name="message">Message</string>
+    <string name="schedule_notification">Schedule Notification</string>
+    <string name="training_name">Training name:</string>
+    <string name="add_friend">Add friend</string>
+    <string name="brightness">Brightness</string>
+    <string name="language">Language</string>
+    <string name="pick_a_date">Pick a date</string>
+    <string name="enter_the_calories_burnt">Enter the calories burnt</string>
+    <string name="enter_the_name_of_the_training">Enter the name of the training</string>
+    <string name="enter_the_type_of_the_training">Enter the type of the training</string>
+    <string name="done">Done</string>
+
+    <string-array name="time">
+        <item>Weekly</item>
+        <item>Monthly</item>
+        <item>Yearly</item>
+    </string-array>
+
+    <string-array name="repetittion">
+        <item>Daily</item>
+        <item>Every Two Day</item>
+        <item>Every Three Day</item>
+        <item>Weekly</item>
+    </string-array>
+
+    <string-array name="sexes">
+        <item>Choose a gender</item>
+        <item>Male</item>
+        <item>Female</item>
+        <item>Other</item>
+    </string-array>
+
+    <string-array name="themes">
+        <item>Dark</item>
+    </string-array>
+
+    <string-array name="languages">
+        <item>English</item>
+        <item>Magyar</item>
+    </string-array>
+</resources>

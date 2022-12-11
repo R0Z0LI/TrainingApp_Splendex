@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "757004909594",
+    "project_id": "training-application-eed80",
+    "storage_bucket": "training-application-eed80.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:757004909594:android:d985a976cb8727506ca5a3",
+        "android_client_info": {
+          "package_name": "hu.bme.aut.android.trainingapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "757004909594-qq2sov2mfjiojd16qmo30riind7r7akg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB2nuGYoWWzd-zEUZdj6ZNMSDMHaxy1G48"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "757004909594-qq2sov2mfjiojd16qmo30riind7r7akg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

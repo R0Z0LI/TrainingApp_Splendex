@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Edző alkalmazás</string>
+    <string name="log_in">Bejelentkezés</string>
+    <string name="email">Email</string>
+    <string name="password">Jelszó</string>
+    <string name="forgot_your_password">Elfelejtetted a jelszavad?</string>
+    <string name="create_your_account">Hozz létre egy felhasználót!</string>
+    <string name="registration">Regisztráció</string>
+    <string name="enter_your_first_name">Add meg a vezetékneved</string>
+    <string name="first_name">Vezetéknév</string>
+    <string name="enter_your_second_name">Add meg a keresztneved</string>
+    <string name="username">Felhasználónév</string>
+    <string name="second_name">Keresztnév</string>
+    <string name="enter_your_username_name">Add meg a felhasználóneved</string>
+    <string name="enter_your_email_address">Add meg az email címed</string>
+    <string name="register">Regisztrálok</string>
+    <string name="pw">*******</string>
+    <string name="confirm_password">Jelszó újra</string>
+    <string name="welcome_to_the_training_app">Üdvözöllek</string>
+    <string name="calendar">Naptár</string>
+    <string name="home">Home</string>
+    <string name="friends">barátok</string>
+    <string name="settings">Beállítások</string>
+    <string name="profile">Profil</string>
+    <string name="placeholder">helytartó</string>
+    <string name="notifications">Értesítések</string>
+    <string name="security">Védelem</string>
+    <string name="appearance">Megjelenés</string>
+    <string name="about">Rólam</string>
+    <string name="name">Név</string>
+    <string name="repetition">Ismétlés</string>
+    <string name="time">Idő</string>
+    <string name="description">leírás</string>
+    <string name="reset_password">Jelszóváltoztatás</string>
+    <string name="fingerprint_1">Fingerprint 1</string>
+    <string name="fingerprint_2">Fingerprint 2</string>
+    <string name="fingerprint_3">Fingerprint 3</string>
+    <string name="theme">Téma</string>
+    <string name="keep_on_screen">Lezárás kikapcsolása</string>
+    <string name="creators">Alkotók</string>
+    <string name="creationtime">Alkotás ideje</string>
+    <string name="latestupdate">Utolsó frissítés</string>
+    <string name="plans">Tervek</string>
+    <string name="training_plan1">Edzésterv</string>
+    <string name="details">Részletek</string>
+    <string name="my_trainings">Edzéseim</string>
+    <string name="time_spent_training">Edzéssel töltött idő</string>
+    <string name="number_of_exercises">Edzések száma</string>
+    <string name="calories_burnt">Elégetett kalória</string>
+    <string name="add">Új</string>
+    <string name="duration">Időtartam</string>
+    <string name="calories">Kalóriák</string>
+    <string name="avg_speed">Átlag sebesség</string>
+    <string name="max_speed">Max sebesség</string>
+    <string name="distance">Távolság</string>
+    <string name="max_pulse">Max pulzus</string>
+    <string name="avg_pulse">Átlag pulzus</string>
+    <string name="save">Mentéssave</string>
+    <string name="exercise">Edzés</string>
+    <string name="type">Típus</string>
+    <string name="enter_the_duration_of_training">Add meg az edzés hosszát</string>
+    <string name="enter_the_distance_traveled">Add meg a távolságot</string>
+    <string name="enter_the_maximum_speed">Enter the maximum speed</string>
+    <string name="enter_average_speed">Add meg az átlagsebességed</string>
+    <string name="reset_your_password">Új jelszó kérése</string>
+    <string name="send_email">Email küldése</string>
+    <string name="profile_details">Profil részletek</string>
+    <string name="phone_number">Telefonszám</string>
+    <string name="skip">Átlépés</string>
+    <string name="next">Következő</string>
+    <string name="add_profile_picture">Profilkép hozzáadás</string>
+    <string name="enter_your_age">Add meg az életkorod</string>
+    <string name="enter_your_phone_number">Add meg a telefonszámod</string>
+    <string name="gender">Nemed</string>
+    <string name="date">Dátum</string>
+    <string name="don_t_show_this_again">Ne mutasd ezt mégegyszer</string>
+    <string name="title">Titulus</string>
+    <string name="message">Üzenet</string>
+    <string name="schedule_notification">Értesítés ütemezése</string>
+    <string name="training_name">Edzés neve:</string>
+    <string name="add_friend">Barát hozzáadása</string>
+
+    <string-array name="time">
+        <item>Heti</item>
+        <item>Have</item>
+        <item>Éves</item>
+    </string-array>
+
+    <string-array name="repetittion">
+        <item>Napi</item>
+        <item>Minden második nap</item>
+        <item>Minden harmadik nap</item>
+        <item>Hetente</item>
+    </string-array>
+
+    <string-array name="sexes">
+        <item>Vélassz nemet</item>
+        <item>Férfi</item>
+        <item>Nő</item>
+        <item>Más</item>
+    </string-array>
+
+    <string-array name="themes">
+        <item>Sötét</item>
+    </string-array>
+
+    <string-array name="languages">
+        <item>English</item>
+        <item>Magyar</item>
+    </string-array>
+</resources>
