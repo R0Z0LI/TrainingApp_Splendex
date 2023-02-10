@@ -109,6 +109,16 @@
                         android:textSize="20sp"
                         android:textStyle="bold"
                         tools:ignore="HardcodedText" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnEdit"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_toEndOf="@+id/twProfile"
+                        android:background="@drawable/ic_baseline_edit"
+                        android:layout_marginStart="75dp"
+                        android:layout_marginTop="10dp"/>
+
                 </RelativeLayout>
 
                 <RelativeLayout
@@ -211,13 +221,16 @@
                         android:textStyle="bold"
                         tools:ignore="HardcodedText" />
 
-                    <Spinner
+                    <TextView
+                        android:id="@+id/tvGender"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
                         android:layout_toEndOf="@id/twSex"
-                        android:entries="@array/sexes"
-                        android:minHeight="48dp"
+                        android:layout_marginStart="20dp"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:text="@string/placeholder"
                         android:textColor="@color/primaryDarkColor" />
                 </RelativeLayout>
             </LinearLayout>

@@ -26,6 +26,7 @@
         android:id="@+id/tvDatePicker"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:text="@string/pick_a_date"
         android:textColor="@color/primaryDarkColor"
         app:layout_constraintEnd_toEndOf="parent"

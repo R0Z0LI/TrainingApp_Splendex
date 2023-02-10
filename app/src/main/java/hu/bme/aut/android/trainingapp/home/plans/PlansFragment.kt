@@ -48,7 +48,6 @@ class PlansFragment : Fragment(R.layout.fragment_calendar){
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         database = FirebaseDatabase.getInstance().getReference("TrainingPlans")
-        //saveData()
         readData()
         binding.btnTraining.setOnClickListener{
             val intent = Intent(requireContext(), TrainingActivity::class.java)

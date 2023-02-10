@@ -1,13 +1,11 @@
 package hu.bme.aut.android.trainingapp.auth.login
 
-import android.app.Dialog
 import android.content.Intent
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.net.Uri
 import android.os.Bundle
 import android.view.View
-import android.view.Window
 import android.widget.AdapterView
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
@@ -15,10 +13,13 @@ import com.google.firebase.database.*
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
 import hu.bme.aut.android.trainingapp.BaseActivity
-import hu.bme.aut.android.trainingapp.R
 import hu.bme.aut.android.trainingapp.databinding.ActivityDetailsBinding
 import hu.bme.aut.android.trainingapp.home.HomeActivity
 import hu.bme.aut.android.trainingapp.model.*
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 import java.io.ByteArrayOutputStream
 import java.io.File
 import java.text.SimpleDateFormat
@@ -31,7 +32,7 @@ class DetailsActivity : BaseActivity(){
     private lateinit var database: DatabaseReference
     private lateinit var auth: FirebaseAuth
     private lateinit var storageReference : StorageReference
-    private lateinit var dialog: Dialog
+
 
     private var loaded = false
     private lateinit var user: User
@@ -60,12 +61,13 @@ class DetailsActivity : BaseActivity(){
         binding = ActivityDetailsBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        user = User()
         bitmap = Bitmap.createBitmap(100,100, Bitmap.Config.ARGB_8888)
         auth = FirebaseAuth.getInstance()
         email = auth.currentUser?.email.toString()
         storageReference = FirebaseStorage.getInstance().getReference("Users/"+auth.currentUser?.uid)
         date = SimpleDateFormat("EEEE, MMMM dd, yyyy").format(Date())
-
+        showProgressDialog()
         loadData()
 
         loadPicture()
@@ -76,7 +78,6 @@ class DetailsActivity : BaseActivity(){
             val stream = ByteArrayOutputStream()
             bitmap.compress(Bitmap.CompressFormat.PNG, 100, stream)
             var byte : ByteArray = stream.toByteArray()
-            startAct()
             val intent = Intent(this, HomeActivity::class.java)
             intent.putExtra("First", firstName)
             intent.putExtra("Second", secondName)
@@ -99,6 +100,18 @@ class DetailsActivity : BaseActivity(){
 
         }
 
+        GlobalScope.launch(Dispatchers.IO) {
+            delay(3000L)
+            runOnUiThread{
+                hideProgressDialog()
+                if(user.userName?.isEmpty() == false) {
+                    initComponents()
+                }
+            }
+
+        }
+
+
         binding.tvProfilePicture.setOnClickListener {
             selectImage()
         }
@@ -115,9 +128,14 @@ class DetailsActivity : BaseActivity(){
         }
     }
 
-    private fun startAct(){
-
+    private fun initComponents() {
+        binding.etFirstName.setText(firstName)
+        binding.etSecondName.setText(secondName)
+        binding.etUserName.setText(userName.toString())
+        binding.etAge.setText(age)
+        binding.etPhoneNumber.setText(phoneNumber)
     }
+
 
     private fun saveData(auth : FirebaseAuth) {
 
@@ -133,13 +151,13 @@ class DetailsActivity : BaseActivity(){
             skip = "true"
         }
 
-        user = User(name, userName, phoneNumber, age, gender, skip, trainings, friends, TrainingDetails(distanceTraveled, caloriesBurnt, hoursSpent, trainingsDone))
+        user = User(name, userName2, phoneNumber, age, gender, skip, trainings, friends, TrainingDetails(distanceTraveled, caloriesBurnt, hoursSpent, trainingsDone))
         if(uid != null){
             database.child(uid).setValue(user).addOnCompleteListener{
                 if(it.isSuccessful){
 
                 } else {
-                    hideProgressBar()
+                    hideProgressDialog()
                     Toast.makeText(this@DetailsActivity, "Failed to update profile", Toast.LENGTH_SHORT).show()
                 }
             }
@@ -150,10 +168,10 @@ class DetailsActivity : BaseActivity(){
         val uid = auth.currentUser?.uid
         if (uid != null) {
             storageReference.child(uid).putFile(imageUri).addOnSuccessListener {
-                hideProgressBar()
+                hideProgressDialog()
                 Toast.makeText(this@DetailsActivity, "Successfully updated profile picture", Toast.LENGTH_SHORT).show()
             }.addOnFailureListener{
-                hideProgressBar()
+                hideProgressDialog()
                 Toast.makeText(this@DetailsActivity, "Failed to update profile picture", Toast.LENGTH_SHORT).show()
             }
         }
@@ -174,29 +192,17 @@ class DetailsActivity : BaseActivity(){
             selected = true
             loaded = true
             binding.circleImageView.setImageURI(imageUri)
-            showProgressBar()
+            showProgressDialog()
             uploadProfilePic()
         }
     }
 
-    private fun showProgressBar(){
-        dialog = Dialog(this@DetailsActivity)
-        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
-        dialog.setContentView(R.layout.dialog_wait)
-        dialog.setCanceledOnTouchOutside(false)
-        dialog.show()
-    }
-
-    private fun hideProgressBar(){
-        dialog.dismiss()
-    }
 
     private fun loadData() {
-        showProgressBar()
         val uid = auth.currentUser?.uid
 
         if(uid != null){
-            Toast.makeText(this@DetailsActivity, "OK", Toast.LENGTH_SHORT).show()
+            //Toast.makeText(this@DetailsActivity, "OK", Toast.LENGTH_SHORT).show()
             readData(uid)
             loadPicture()
         }else{
@@ -263,10 +269,7 @@ class DetailsActivity : BaseActivity(){
                     }
 
                 })
-            }else{
-                Toast.makeText(this@DetailsActivity, "User does not exist", Toast.LENGTH_SHORT).show()
             }
-
         }.addOnFailureListener {
             Toast.makeText(this@DetailsActivity, "Failed to read the data", Toast.LENGTH_SHORT).show()
         }
@@ -276,14 +279,10 @@ class DetailsActivity : BaseActivity(){
     private fun loadPicture() {
         val localFile = File.createTempFile("tempFile", ".jpg")
         storageReference.getFile(localFile).addOnSuccessListener {
-            hideProgressBar()
             loaded = true
             bitmap = BitmapFactory.decodeFile(localFile.absolutePath)
             binding.circleImageView.setImageBitmap(bitmap)
         }.addOnFailureListener{
-            if(dialog.isShowing){
-                hideProgressBar()
-            }
             Toast.makeText(this@DetailsActivity, "Failed to get the image", Toast.LENGTH_SHORT).show()
         }
 

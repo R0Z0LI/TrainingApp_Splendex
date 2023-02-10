@@ -11,7 +11,7 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/secondaryColor">
+        android:background="@color/primaryLightColor">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -49,30 +49,9 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginEnd="20dp"
                 android:background="@drawable/input_shape"
-                android:src="@drawable/ic_calendar_label"
+                android:src="@drawable/img"
                 android:scaleType="centerCrop" />
 
-            <ImageButton
-                android:id="@+id/btnTraining3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginEnd="20dp"
-                android:background="@drawable/input_shape"
-                android:src="@drawable/ic_calendar_label"
-                android:scaleType="centerCrop" />
-
-            <ImageButton
-                android:id="@+id/btnTraining4"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginEnd="20dp"
-                android:background="@drawable/input_shape"
-                android:src="@drawable/ic_calendar_label"
-                android:scaleType="centerCrop" />
 
         </LinearLayout>
 

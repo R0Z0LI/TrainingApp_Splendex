@@ -25,6 +25,7 @@ class CreateAccountActivity : BaseActivity() {
 
         binding.btnRegister.setOnClickListener{
             registerClick()
+
         }
     }
 
@@ -56,6 +57,7 @@ class CreateAccountActivity : BaseActivity() {
                     .setDisplayName(firebaseUser?.email?.substringBefore('@'))
                     .build()
                 firebaseUser?.updateProfile(profileChangeRequest)
+                FirebaseAuth.getInstance().signOut()
                 startActivity(Intent(this, LoginActivity::class.java))
             }
             .addOnFailureListener { exception ->

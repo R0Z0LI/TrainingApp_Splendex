@@ -14,7 +14,7 @@ const val messageExtra = "messageExtra"
 
 class Notification : BroadcastReceiver(){
     override fun onReceive(context: Context?, intent: Intent?) {
-        val notification = NotificationCompat.Builder(context!!, channelID)
+        val notification : android.app.Notification = NotificationCompat.Builder(context!!, channelID)
             .setSmallIcon(R.drawable.ic_notification)
             .setContentTitle(intent?.getStringExtra(titleExtra))
             .setContentText(intent?.getStringExtra(messageExtra))

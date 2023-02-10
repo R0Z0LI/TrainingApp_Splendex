@@ -86,6 +86,14 @@
     <string name="enter_the_name_of_the_training">Enter the name of the training</string>
     <string name="enter_the_type_of_the_training">Enter the type of the training</string>
     <string name="done">Done</string>
+    <string name="rationale_dialog_title">Attention!</string>
+    <string name="contacts_permission_explanation">The application needs to access your contacts to display them.</string>
+    <string name="exit">Exit</string>
+    <string name="proceed">Proceed</string>
+    <string name="add_username">Add username</string>
+    <string name="dark_mode_on">Dark mode on</string>
+    <string name="zoltan_rohringer">Zoltan Rohringer</string>
+    <string name="_12_15_2022">12/15/2022</string>
 
     <string-array name="time">
         <item>Weekly</item>

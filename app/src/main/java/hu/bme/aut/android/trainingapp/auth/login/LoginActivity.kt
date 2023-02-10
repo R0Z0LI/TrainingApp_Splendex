@@ -14,7 +14,6 @@ class LoginActivity : BaseActivity() {
     private lateinit var binding: ActivityLoginBinding
     private lateinit var firebaseAuth: FirebaseAuth
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityLoginBinding.inflate(layoutInflater)
@@ -24,10 +23,11 @@ class LoginActivity : BaseActivity() {
 
         val firebaseUser = FirebaseAuth.getInstance().currentUser
 
-        if(firebaseUser != null){
+
+        /*if(firebaseUser != null){
             startActivity(Intent(this, DetailsActivity::class.java))
             finish()
-        }
+        }*/
 
 
         binding.tvForgotPassword.setOnClickListener{

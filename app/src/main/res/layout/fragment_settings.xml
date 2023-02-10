@@ -37,6 +37,9 @@
                             android:layout_height="80dp"
                             android:layout_marginEnd="20dp"
                             android:textAlignment="center"
+                            android:padding="25dp"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
                             android:text="@string/profile"
                             android:textColor="@color/primaryDarkColor"
                             android:layout_toEndOf="@id/imPerson" />
@@ -78,6 +81,10 @@
                                 android:layout_width="335dp"
                                 android:layout_height="80dp"
                                 android:layout_marginEnd="20dp"
+                                android:textAlignment="center"
+                                android:padding="25dp"
+                                android:textSize="20sp"
+                                android:textStyle="bold"
                                 android:text="@string/notifications"
                                 android:textColor="@color/primaryDarkColor"
                                 android:layout_toEndOf="@+id/imNotification"
@@ -222,6 +229,10 @@
                                 android:layout_width="335dp"
                                 android:layout_height="80dp"
                                 android:layout_marginEnd="20dp"
+                                android:textAlignment="center"
+                                android:padding="25dp"
+                                android:textSize="20sp"
+                                android:textStyle="bold"
                                 android:text="@string/security"
                                 android:textColor="@color/primaryDarkColor"
                                 android:layout_toEndOf="@+id/ivSecurity"
@@ -279,6 +290,10 @@
                                 android:layout_width="335dp"
                                 android:layout_height="80dp"
                                 android:layout_marginEnd="20dp"
+                                android:textAlignment="center"
+                                android:padding="25dp"
+                                android:textSize="20sp"
+                                android:textStyle="bold"
                                 android:text="@string/appearance"
                                 android:textColor="@color/primaryDarkColor"
                                 android:layout_toEndOf="@+id/imAppearance"
@@ -292,29 +307,6 @@
                             android:orientation="vertical"
                             android:visibility="gone">
 
-                            <RelativeLayout
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content">
-
-                                <TextView
-                                    android:id="@+id/tvTheme"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="@string/theme"
-                                    android:textColor="@color/primaryDarkColor"
-                                    android:layout_marginStart="60dp"/>
-
-                                <Spinner
-                                    android:id="@+id/spTheme"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:layout_toEndOf="@id/tvTheme"
-                                    android:layout_marginEnd="27dp"
-                                    android:entries="@array/themes"
-                                    android:layout_marginStart="100dp"/>
-
-
-                            </RelativeLayout>
 
                             <RelativeLayout
                                 android:layout_width="match_parent"
@@ -325,7 +317,7 @@
                                     android:id="@+id/tvKeepOnScreen"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="@string/keep_on_screen"
+                                    android:text="@string/dark_mode_on"
                                     android:textColor="@color/primaryDarkColor"
                                     android:layout_marginStart="60dp"
                                     android:layout_marginTop="15dp"/>
@@ -430,6 +422,10 @@
                                 android:layout_width="335dp"
                                 android:layout_height="80dp"
                                 android:layout_marginEnd="20dp"
+                                android:textAlignment="center"
+                                android:padding="25dp"
+                                android:textSize="20sp"
+                                android:textStyle="bold"
                                 android:text="@string/about"
                                 android:textColor="@color/primaryDarkColor"
                                 android:layout_toEndOf="@+id/imAbout" />
@@ -461,7 +457,7 @@
                                     android:layout_marginStart="10dp"
                                     android:layout_marginEnd="27dp"
                                     android:layout_toEndOf="@id/tvCreators"
-                                    android:text="@string/placeholder"
+                                    android:text="@string/zoltan_rohringer"
                                     android:textAlignment="viewEnd"
                                     android:textColor="@color/primaryDarkColor" />
 
@@ -487,7 +483,7 @@
                                     android:layout_marginStart="10dp"
                                     android:layout_marginEnd="27dp"
                                     android:layout_toEndOf="@id/tvCreationTime"
-                                    android:text="@string/placeholder"
+                                    android:text="@string/_12_15_2022"
                                     android:textAlignment="viewEnd"
                                     android:textColor="@color/primaryDarkColor" />
 
@@ -513,7 +509,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_toEndOf="@id/tvLatestUpdate"
                                     android:layout_marginEnd="27dp"
-                                    android:text="@string/placeholder"
+                                    android:text="@string/_12_15_2022"
                                     android:textColor="@color/primaryDarkColor"
                                     android:textAlignment="textEnd"
                                     android:layout_marginStart="10dp"/>

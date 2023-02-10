@@ -1,11 +1,13 @@
 package hu.bme.aut.android.trainingapp.home.profile
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import hu.bme.aut.android.trainingapp.R
+import hu.bme.aut.android.trainingapp.auth.login.DetailsActivity
 import hu.bme.aut.android.trainingapp.databinding.FragmentProfileBinding
 import hu.bme.aut.android.trainingapp.home.UserDataHolder
 
@@ -55,6 +57,10 @@ class ProfileFragment : Fragment(R.layout.fragment_profile) {
         } else{
             binding.ivProfilePic.setImageResource(R.drawable.profile)
         }
+        binding.btnEdit.setOnClickListener{
+            startActivity(Intent(requireContext(), DetailsActivity::class.java))
+        }
+        binding.tvGender.text = user?.sex.toString()
         binding.tvAge2.text = user?.age.toString()
         binding.tvPhoneNumber.text = user?.phoneNumber.toString()
         binding.tvEmail2.text = email

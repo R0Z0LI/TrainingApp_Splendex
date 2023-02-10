@@ -72,14 +72,20 @@ class HomeFragment : Fragment(R.layout.fragment_home), DatePickerDialog.OnDateSe
         getData()
         initRecyclerView()
 
+        binding.tvDatePicker.text = SimpleDateFormat("EEEE, MMMM dd, yyyy").format(Date())
+
         binding.tvDatePicker.setOnClickListener {
-            DatePickerDialog(
+            val calendar2 = Calendar.getInstance()
+            val datePicker = DatePickerDialog(
                 requireContext(),
                 this,
                 calendar.get(Calendar.YEAR),
                 calendar.get(Calendar.MONTH),
                 calendar.get(Calendar.DAY_OF_MONTH)
-            ).show()
+            )
+            datePicker.datePicker.maxDate = calendar2.timeInMillis
+            datePicker.show()
+
         }
 
         binding.btnAdd.setOnClickListener{
